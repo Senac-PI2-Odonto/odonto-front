@@ -36,6 +36,20 @@
     background-color: rgba(201, 162, 39, 0.14);
 }
 
+.my_box01{
+    margin-top: 3rem;
+}
+
+.my_box01 #Sobre_ImplanteDental p{
+    margin-top: 0.5rem;
+    text-align: justify;
+}
+
+
+
+
+
+
 /* Imagens */
 
 @media screen and (max-width: 450px) {
@@ -95,5 +109,173 @@
         padding: 1rem;
         border-radius: 0 0 1rem 1rem;
         transition: 0.13s !important;
+    }
+}
+
+
+
+/* Div my_agendamento_card */
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+    .my_agendamento_card{
+        position: absolute; /* bootstrap: position-absolute */
+        bottom: 0; /* bootstrap: bottom-0 */
+        left: 0; /* bootstrap: start-0 */
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 320px) {
+    .my_agendamento_card > span {
+        font-size: 1rem !important; /* bootstrap h5 */
+    }
+    .my_agendamento_card > a {
+        font-size: 0.8rem !important; /* bootstrap h6 */
+        width: 70% !important;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 380px) {
+    .my_agendamento_card > span {
+        font-size: 1rem !important; /* bootstrap h5 */
+    }
+    .my_agendamento_card > a {
+        font-size: 0.8rem !important; /* bootstrap h6 */
+    }
+}
+
+@media screen and (min-width: 501px) {
+    .my_agendamento_card{
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translate(0, -50%);
+    }
+}
+
+@media screen and (min-width: 950px){
+    .my_agendamento_card{
+        left: 10%;
+    }
+    .my_agendamento_card > span {
+        font-size: 1.5rem !important; /* bootstrap h4 */
+    }
+    .my_agendamento_card > a {
+        font-size: 1.25rem !important; /* bootstrap h5 */
+    }
+}
+
+@media screen and (min-width: 1401px){
+    .my_agendamento_card{
+        left: 15%;
+    }
+}
+
+@media screen and (min-width: 1901px){
+    .my_agendamento_card > span {
+        font-size: 1.75rem !important; /* bootstrap h3 */
+    }
+    .my_agendamento_card > a {
+        font-size: 1.5rem !important; /* bootstrap h4 */
+    }
+}
+
+/* my_box01 */
+
+@media screen and (min-width: 0px) {
+    .my_box01 #Imagem_ImplanteDental{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .my_box01{
+        flex-direction: column;
+    }
+    .my_box01 #Imagem_ImplanteDental{
+        width: 100% !important;
+    }
+    .my_box01 #Sobre_ImplanteDental{
+        margin-top: 3rem;
+        width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 501px) {
+    .my_box01 #Imagem_ImplanteDental{
+        width: 50% !important;
+    }
+    .my_box01 #Imagem_ImplanteDental img{
+        width: 80% !important;
+    }
+
+    .my_box01 #Sobre_ImplanteDental{
+        width: 50% !important;
+    }
+    .my_box01 #Sobre_ImplanteDental h2{
+        width: 80% !important;
+    }
+    .my_box01 #Sobre_ImplanteDental p{
+        width: 80% !important;
+    }
+}
+
+@media screen and (min-width: 701px) {
+    .my_box01 #Imagem_ImplanteDental img{
+        width: 65% !important;
+    }
+}
+
+@media screen and (min-width: 861px) {
+    .my_box01 #Imagem_ImplanteDental img{
+        width: 55% !important;
+    }
+
+    .my_box01 #Sobre_ImplanteDental h2{
+        width: 70% !important;
+    }
+    .my_box01 #Sobre_ImplanteDental p{
+        width: 70% !important;
+    }
+}
+
+@media screen and (min-width: 1151px) {
+    .my_box01 #Imagem_ImplanteDental img{
+        width: 45% !important;
+    }
+}
+
+@media screen and (min-width: 1501px) {
+    .my_box01 #Imagem_ImplanteDental img{
+        width: 35% !important;
+    }
+    .my_box01 #Sobre_ImplanteDental h2{
+        width: 60% !important;
+    }
+    .my_box01 #Sobre_ImplanteDental p{
+        width: 60% !important;
+    }
+}
+
+@media screen and (min-width: 1521px) {
+    .my_box01 {
+        width: 70%;
+        margin: 3rem auto auto auto;
+        justify-content: space-around;
+    }
+    .my_box01 #Imagem_ImplanteDental img{
+        width: 45% !important;
+    }
+    .my_box01 #Sobre_ImplanteDental h2{
+        width: 70% !important;
+    }
+    .my_box01 #Sobre_ImplanteDental p{
+        width: 70% !important;
+    }
+}
+
+@media screen and (min-width: 1991px) {
+    .my_box01 #Imagem_ImplanteDental img{
+        width: 40% !important;
     }
 }
