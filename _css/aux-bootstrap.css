@@ -40,6 +40,8 @@
     background-color: rgba(201, 162, 39, 0.14);
 }
 
+/* Imagens */
+
 @media screen and (max-width: 450px) {
     .my_img-450px{
         display: block;
@@ -65,5 +67,37 @@
     .my_img-2560px{
         display: block;
         width: 100%;
+    }
+}
+
+/* Mobile Navbar */
+
+@media screen and (max-width: 450px) {
+    .my_index{
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #F8F9FA;
+        text-align: left;
+        padding: 1rem;
+        border-radius: 0 0 1rem 1rem;
+        transition: 0.13s !important;
+    }
+}
+
+@media screen and (min-width: 451px) and (max-width: 991px) {
+    .my_index{
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 50%;
+        width: 50%;
+        background-color: #F8F9FA;
+        text-align: left;
+        padding: 1rem;
+        border-radius: 0 0 1rem 1rem;
+        transition: 0.13s !important;
     }
 }
