@@ -40,7 +40,7 @@ main{
     margin-top: 3rem;
 }
 
-.my_box01 #Sobre_ImplanteDental p{
+.my_box01 .my_box01_Sobre p{
     margin-top: 0.5rem;
     text-align: justify;
 }
@@ -50,7 +50,7 @@ main{
     text-align: justify;
 }
 
-.my_box02 .my_descricao .my_span{
+.my_span{
     color: #0099B8;
     display: grid;
 }
@@ -190,7 +190,7 @@ main{
 /* my_box01 */
 
 @media screen and (min-width: 0px) {
-    .my_box01 #Imagem_ImplanteDental{
+    .my_box01 .my_box01_Images{
         justify-content: center;
     }
 }
@@ -199,67 +199,67 @@ main{
     .my_box01{
         flex-direction: column;
     }
-    .my_box01 #Imagem_ImplanteDental{
+    .my_box01 .my_box01_Images{
         width: 100% !important;
     }
-    .my_box01 #Sobre_ImplanteDental{
+    .my_box01 .my_box01_Sobre{
         margin-top: 3rem;
         width: 100% !important;
     }
 }
 
 @media screen and (min-width: 501px) {
-    .my_box01 #Imagem_ImplanteDental{
+    .my_box01 .my_box01_Images{
         width: 50% !important;
     }
-    .my_box01 #Imagem_ImplanteDental img{
+    .my_box01 .my_box01_Images img{
         width: 80% !important;
     }
 
-    .my_box01 #Sobre_ImplanteDental{
+    .my_box01 .my_box01_Sobre{
         width: 50% !important;
     }
-    .my_box01 #Sobre_ImplanteDental h2{
+    .my_box01 .my_box01_Sobre h2{
         width: 80% !important;
     }
-    .my_box01 #Sobre_ImplanteDental p{
+    .my_box01 .my_box01_Sobre p{
         width: 80% !important;
     }
 }
 
 @media screen and (min-width: 701px) {
-    .my_box01 #Imagem_ImplanteDental img{
+    .my_box01 .my_box01_Images img{
         width: 65% !important;
     }
 }
 
 @media screen and (min-width: 861px) {
-    .my_box01 #Imagem_ImplanteDental img{
+    .my_box01 .my_box01_Images img{
         width: 55% !important;
     }
 
-    .my_box01 #Sobre_ImplanteDental h2{
+    .my_box01 .my_box01_Sobre h2{
         width: 70% !important;
     }
-    .my_box01 #Sobre_ImplanteDental p{
+    .my_box01 .my_box01_Sobre p{
         width: 70% !important;
     }
 }
 
 @media screen and (min-width: 1151px) {
-    .my_box01 #Imagem_ImplanteDental img{
+    .my_box01 .my_box01_Images img{
         width: 45% !important;
     }
 }
 
 @media screen and (min-width: 1501px) {
-    .my_box01 #Imagem_ImplanteDental img{
+    .my_box01 .my_box01_Images img{
         width: 35% !important;
     }
-    .my_box01 #Sobre_ImplanteDental h2{
+    .my_box01 .my_box01_Sobre h2{
         width: 60% !important;
     }
-    .my_box01 #Sobre_ImplanteDental p{
+    .my_box01 .my_box01_Sobre p{
         width: 60% !important;
     }
 }
@@ -270,19 +270,19 @@ main{
         margin: 3rem auto auto auto;
         justify-content: space-around;
     }
-    .my_box01 #Imagem_ImplanteDental img{
+    .my_box01 .my_box01_Images img{
         width: 45% !important;
     }
-    .my_box01 #Sobre_ImplanteDental h2{
+    .my_box01 .my_box01_Sobre h2{
         width: 70% !important;
     }
-    .my_box01 #Sobre_ImplanteDental p{
+    .my_box01 .my_box01_Sobre p{
         width: 70% !important;
     }
 }
 
 @media screen and (min-width: 1991px) {
-    .my_box01 #Imagem_ImplanteDental img{
+    .my_box01 .my_box01_Images img{
         width: 40% !important;
     }
 }
@@ -297,11 +297,11 @@ main{
         width: 100% !important;
     }
 
-    .my_box02 .my_descricao .my_span{
+    .my_span{
         flex-direction: column;
     }
 
-    .my_box02 .my_descricao .my_span span{
+    .my_span span{
         margin-top: 1rem;
         text-align: center;
     }
@@ -324,11 +324,11 @@ main{
         width: 25% !important;
     }
 
-    .my_box02 .my_descricao .my_span{
+    .my_span{
         flex-direction: column;
     }
 
-    .my_box02 .my_descricao .my_span span{
+    .my_span span{
         margin-top: 1rem;
         text-align: center;
     }
@@ -340,21 +340,21 @@ main{
         top: 0;
         width: 60% !important;
     }
-    .my_box02 .my_descricao .my_span{
+    .my_span{
         grid-template-columns: auto auto auto;
         gap: 1rem;
     }
 }
 
 @media screen and (min-width: 850px) and (max-width: 1280px){
-    .my_lentesPorcelana {
-        grid-area: my_lentesPorcelana;
+    .my_span03 {
+        grid-area: my_span03;
         text-align: center;
     }
-    .my_box02 .my_descricao .my_span{
+    .my_span{
         grid-template-areas: 
-            "my_implantes my_clareamento"
-            "my_lentesPorcelana my_lentesPorcelana";
+            "my_span01 my_span02"
+            "my_span03 my_span03";
     }
 }
 
@@ -419,5 +419,19 @@ main{
 @media screen and (min-width: 1921px) {
     .my_box02 .my_sub_imagem img{
         width: 60% !important;
+    }
+}
+
+/* my_box01 my_span span_alt */
+
+@media screen and (max-width: 1280px) {
+    .span_alt{
+        width: 50% !important;
+    }
+}
+
+@media screen and (min-width: 1281px) {
+    .span_alt{
+        width: 100% !important;
     }
 }
