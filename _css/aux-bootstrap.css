@@ -8,28 +8,28 @@
     margin: 0;
 }
 
+main{
+    background-color: #F9F9F9;
+}
+
 .my_text_yellow{
     color: #C9A227 !important;
 }
 
 .my_img-1920px{
     display: none;
-    width: 100%;
 }
 
 .my_img-1280px{
     display: none;
-    width: 100%;
 }
 
 .my_img-450px{
     display: none;
-    width: 100%;
 }
 
 .my_img-2560px{
     display: none;
-    width: 100%;
 }
 
 .my_agentamento_button{
@@ -45,38 +45,46 @@
     text-align: justify;
 }
 
+.my_box02 .my_descricao .my_sobre p{
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+.my_box02 .my_descricao .my_span{
+    color: #0099B8;
+    display: grid;
+}
 
 
 
-
+.my_box02 div .my_sub_imagem{
+    margin-left: 10%;
+    margin-bottom: 3rem;
+}
 
 /* Imagens */
 
 @media screen and (max-width: 450px) {
     .my_img-450px{
         display: block;
-        width: 100%;
     }
 }
 
 @media screen and (min-width: 451px) and (max-width: 1280px){
     .my_img-1280px{
         display: block;
-        width: 100%;
     }
 }
 
 @media screen and (min-width: 1281px) and (max-width: 1920px){
     .my_img-1920px{
         display: block;
-        width: 100%;
     }
 }
 
 @media screen and (min-width: 1921px){
     .my_img-2560px{
         display: block;
-        width: 100%;
     }
 }
 
@@ -277,5 +285,128 @@
 @media screen and (min-width: 1991px) {
     .my_box01 #Imagem_ImplanteDental img{
         width: 40% !important;
+    }
+}
+
+
+/* my_box02 - My Sobre*/
+
+@media screen and (max-width: 500px) {
+    
+    .my_box02 .my_descricao{
+        margin-top: 3rem;
+        width: 100% !important;
+    }
+
+    .my_box02 .my_descricao .my_span{
+        flex-direction: column;
+    }
+
+    .my_box02 .my_descricao .my_span span{
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 501px) and (max-width: 799px) {
+    .my_box02 .my_descricao{
+        margin-top: 3rem;
+        width: 100% !important;
+        flex-direction: row !important;
+        justify-content: space-evenly;
+    }
+
+    .my_box02 .my_descricao .my_sobre {
+        width: 55% !important;
+    }
+
+    .my_box02 .my_descricao .my_span{
+        width: 25% !important;
+    }
+
+    .my_box02 .my_descricao .my_span{
+        flex-direction: column;
+    }
+
+    .my_box02 .my_descricao .my_span span{
+        margin-top: 1rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .my_box02 .my_descricao {
+        position: absolute;
+        top: 0;
+        width: 60% !important;
+    }
+    .my_box02 .my_descricao .my_span{
+        grid-template-columns: auto auto auto;
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 950px) and (max-width: 1100px) {
+    .my_box02 .my_descricao {
+        top: 10%;
+    }
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1550px) {
+    .my_box02 .my_descricao {
+        top: 15%;
+    }
+}
+
+@media screen and (min-width: 1551px) and (max-width: 2000px) {
+    .my_box02 .my_descricao {
+        top: 20%;
+    }
+}
+
+@media screen and (min-width: 2000px){
+    .my_box02 .my_descricao {
+        top: 25%;
+    }
+}
+
+
+
+/* my_box02 - Tamanho da Sub Imagem: */
+
+@media screen and (max-width: 450px) {
+    .my_box02 .my_sub_imagem img{
+        width: 40% !important;
+    }
+}
+
+@media screen and (min-width: 451px) and (max-width: 600px) {
+    .my_box02 .my_sub_imagem img{
+        width: 30% !important;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .my_box02 .my_sub_imagem img{
+        width: 35% !important;
+    }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1280px) {
+    .my_box02 .my_sub_imagem img{
+        width: 40% !important;
+    }
+}
+
+@media screen and (min-width: 1281px)  and (max-width: 1920px) {
+    .my_box02 .my_sub_imagem img{
+        width: 50% !important;
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    .my_box02 .my_sub_imagem img{
+        width: 60% !important;
     }
 }
