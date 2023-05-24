@@ -55,12 +55,11 @@ main{
     display: grid;
 }
 
-
-
 .my_box02 div .my_sub_imagem{
     margin-left: 10%;
     margin-bottom: 3rem;
 }
+
 
 /* Imagens */
 
@@ -347,7 +346,19 @@ main{
     }
 }
 
-@media screen and (min-width: 950px) and (max-width: 1100px) {
+@media screen and (min-width: 850px) and (max-width: 1266px){
+    .span3 {
+        grid-area: span3;
+        text-align: center;
+    }
+    .my_box02 .my_descricao .my_span{
+        grid-template-areas: 
+            "span1 span2"
+            "span3 span3";
+    }
+}
+
+@media screen and (min-width: 984px) and (max-width: 1100px) {
     .my_box02 .my_descricao {
         top: 10%;
     }
