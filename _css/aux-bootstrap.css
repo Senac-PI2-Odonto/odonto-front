@@ -6,7 +6,6 @@
     font-family: 'Poppins', sans-serif;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 main {
@@ -593,11 +592,26 @@ main {
         grid-auto-columns: calc((100% / 2));
         gap: 30px;
     }
+
+    .wrapper i:first-child {
+        left: -11px;
+    }
+    
+    .wrapper i:last-child {
+        right: -11px;
+    }
 }
 
 @media screen and (max-width: 600px) {
     .wrapper .carousel {
         grid-auto-columns: 100%;
         padding: 0;
+    }
+    .wrapper i:first-child {
+        left: 0px;
+    }
+    
+    .wrapper i:last-child {
+        right: 0px;
     }
 }
