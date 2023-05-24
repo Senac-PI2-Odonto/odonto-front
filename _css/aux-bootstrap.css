@@ -346,15 +346,15 @@ main{
     }
 }
 
-@media screen and (min-width: 850px) and (max-width: 1266px){
-    .span3 {
-        grid-area: span3;
+@media screen and (min-width: 850px) and (max-width: 1280px){
+    .my_lentesPorcelana {
+        grid-area: my_lentesPorcelana;
         text-align: center;
     }
     .my_box02 .my_descricao .my_span{
         grid-template-areas: 
-            "span1 span2"
-            "span3 span3";
+            "my_implantes my_clareamento"
+            "my_lentesPorcelana my_lentesPorcelana";
     }
 }
 
