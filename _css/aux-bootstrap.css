@@ -2,87 +2,207 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     font-family: 'Poppins', sans-serif;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-main{
+main {
     background-color: #F9F9F9;
 }
 
-.my_text_yellow{
+.my_text_yellow {
     color: #C9A227 !important;
 }
 
-.my_img-1920px{
+.my_img-1920px {
     display: none;
 }
 
-.my_img-1280px{
+.my_img-1280px {
     display: none;
 }
 
-.my_img-450px{
+.my_img-450px {
     display: none;
 }
 
-.my_img-2560px{
+.my_img-2560px {
     display: none;
 }
 
-.my_agentamento_button{
+.my_agentamento_button {
     background-color: rgba(201, 162, 39, 0.14);
 }
 
-.my_box01{
+.my_box01 {
     margin-top: 3rem;
 }
 
-.my_box01 .my_box01_Sobre p{
+.my_box01 .my_box01_Sobre p {
     margin-top: 0.5rem;
     text-align: justify;
 }
 
-.my_box02 .my_descricao .my_sobre p{
+.my_box02 .my_descricao .my_sobre p {
     margin-top: 1rem;
     text-align: justify;
 }
 
-.my_span{
+.my_span {
     color: #0099B8;
     display: grid;
 }
 
-.my_box02 div .my_sub_imagem{
+.my_box02 div .my_sub_imagem {
     margin-left: 10%;
     margin-bottom: 3rem;
 }
 
+/* Carousel */
+
+.my_carosel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    width: 90%;
+    margin: auto;
+}
+
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper i:first-child {
+    left: -22px;
+}
+
+.wrapper i:last-child {
+    right: -22px;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3));
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 3rem 0;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .item {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel :where(.item, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .item {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: #F8F8F8;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.carousel .item .img {
+    background: #C9A227;
+    height: 148px;
+    width: 148px;
+    border-radius: 50%;
+}
+
+.item .img img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+}
+
+.carousel .item h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+}
+
+.carousel .item span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+}
 
 /* Imagens */
 
 @media screen and (max-width: 450px) {
-    .my_img-450px{
+    .my_img-450px {
         display: block;
     }
 }
 
-@media screen and (min-width: 451px) and (max-width: 1280px){
-    .my_img-1280px{
+@media screen and (min-width: 451px) and (max-width: 1280px) {
+    .my_img-1280px {
         display: block;
     }
 }
 
-@media screen and (min-width: 1281px) and (max-width: 1920px){
-    .my_img-1920px{
+@media screen and (min-width: 1281px) and (max-width: 1920px) {
+    .my_img-1920px {
         display: block;
     }
 }
 
-@media screen and (min-width: 1921px){
-    .my_img-2560px{
+@media screen and (min-width: 1921px) {
+    .my_img-2560px {
         display: block;
     }
 }
@@ -90,7 +210,7 @@ main{
 /* Mobile Navbar */
 
 @media screen and (max-width: 450px) {
-    .my_index{
+    .my_index {
         position: absolute;
         z-index: 1;
         top: 100%;
@@ -105,7 +225,7 @@ main{
 }
 
 @media screen and (min-width: 451px) and (max-width: 991px) {
-    .my_index{
+    .my_index {
         position: absolute;
         z-index: 1;
         top: 100%;
@@ -124,35 +244,44 @@ main{
 /* Div my_agendamento_card */
 
 @media screen and (min-width: 0px) and (max-width: 500px) {
-    .my_agendamento_card{
-        position: absolute; /* bootstrap: position-absolute */
-        bottom: 0; /* bootstrap: bottom-0 */
-        left: 0; /* bootstrap: start-0 */
+    .my_agendamento_card {
+        position: absolute;
+        /* bootstrap: position-absolute */
+        bottom: 0;
+        /* bootstrap: bottom-0 */
+        left: 0;
+        /* bootstrap: start-0 */
         padding: 1rem;
     }
 }
 
 @media screen and (min-width: 300px) and (max-width: 320px) {
-    .my_agendamento_card > span {
-        font-size: 1rem !important; /* bootstrap h5 */
+    .my_agendamento_card>span {
+        font-size: 1rem !important;
+        /* bootstrap h5 */
     }
-    .my_agendamento_card > a {
-        font-size: 0.8rem !important; /* bootstrap h6 */
+
+    .my_agendamento_card>a {
+        font-size: 0.8rem !important;
+        /* bootstrap h6 */
         width: 70% !important;
     }
 }
 
 @media screen and (min-width: 321px) and (max-width: 380px) {
-    .my_agendamento_card > span {
-        font-size: 1rem !important; /* bootstrap h5 */
+    .my_agendamento_card>span {
+        font-size: 1rem !important;
+        /* bootstrap h5 */
     }
-    .my_agendamento_card > a {
-        font-size: 0.8rem !important; /* bootstrap h6 */
+
+    .my_agendamento_card>a {
+        font-size: 0.8rem !important;
+        /* bootstrap h6 */
     }
 }
 
 @media screen and (min-width: 501px) {
-    .my_agendamento_card{
+    .my_agendamento_card {
         position: absolute;
         top: 50%;
         left: 5%;
@@ -160,106 +289,121 @@ main{
     }
 }
 
-@media screen and (min-width: 950px){
-    .my_agendamento_card{
+@media screen and (min-width: 950px) {
+    .my_agendamento_card {
         left: 10%;
     }
-    .my_agendamento_card > span {
-        font-size: 1.5rem !important; /* bootstrap h4 */
+
+    .my_agendamento_card>span {
+        font-size: 1.5rem !important;
+        /* bootstrap h4 */
     }
-    .my_agendamento_card > a {
-        font-size: 1.25rem !important; /* bootstrap h5 */
+
+    .my_agendamento_card>a {
+        font-size: 1.25rem !important;
+        /* bootstrap h5 */
     }
 }
 
-@media screen and (min-width: 1401px){
-    .my_agendamento_card{
+@media screen and (min-width: 1401px) {
+    .my_agendamento_card {
         left: 15%;
     }
 }
 
-@media screen and (min-width: 1901px){
-    .my_agendamento_card > span {
-        font-size: 1.75rem !important; /* bootstrap h3 */
+@media screen and (min-width: 1901px) {
+    .my_agendamento_card>span {
+        font-size: 1.75rem !important;
+        /* bootstrap h3 */
     }
-    .my_agendamento_card > a {
-        font-size: 1.5rem !important; /* bootstrap h4 */
+
+    .my_agendamento_card>a {
+        font-size: 1.5rem !important;
+        /* bootstrap h4 */
     }
 }
 
 /* my_box01 */
 
 @media screen and (min-width: 0px) {
-    .my_box01 .my_box01_Images{
+    .my_box01 .my_box01_Images {
         justify-content: center;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .my_box01{
+    .my_box01 {
         flex-direction: column;
     }
-    .my_box01 .my_box01_Images{
+
+    .my_box01 .my_box01_Images {
         width: 100% !important;
     }
-    .my_box01 .my_box01_Sobre{
+
+    .my_box01 .my_box01_Sobre {
         margin-top: 3rem;
         width: 100% !important;
     }
 }
 
 @media screen and (min-width: 501px) {
-    .my_box01 .my_box01_Images{
+    .my_box01 .my_box01_Images {
         width: 50% !important;
     }
-    .my_box01 .my_box01_Images img{
+
+    .my_box01 .my_box01_Images img {
         width: 80% !important;
     }
 
-    .my_box01 .my_box01_Sobre{
+    .my_box01 .my_box01_Sobre {
         width: 50% !important;
     }
-    .my_box01 .my_box01_Sobre h2{
+
+    .my_box01 .my_box01_Sobre h2 {
         width: 80% !important;
     }
-    .my_box01 .my_box01_Sobre p{
+
+    .my_box01 .my_box01_Sobre p {
         width: 80% !important;
     }
 }
 
 @media screen and (min-width: 701px) {
-    .my_box01 .my_box01_Images img{
+    .my_box01 .my_box01_Images img {
         width: 65% !important;
     }
 }
 
 @media screen and (min-width: 861px) {
-    .my_box01 .my_box01_Images img{
+    .my_box01 .my_box01_Images img {
         width: 55% !important;
     }
 
-    .my_box01 .my_box01_Sobre h2{
+    .my_box01 .my_box01_Sobre h2 {
         width: 70% !important;
     }
-    .my_box01 .my_box01_Sobre p{
+
+    .my_box01 .my_box01_Sobre p {
         width: 70% !important;
     }
 }
 
 @media screen and (min-width: 1151px) {
-    .my_box01 .my_box01_Images img{
+    .my_box01 .my_box01_Images img {
         width: 45% !important;
     }
 }
 
 @media screen and (min-width: 1501px) {
-    .my_box01 .my_box01_Images img{
+    .my_box01 .my_box01_Images img {
         width: 35% !important;
     }
-    .my_box01 .my_box01_Sobre h2{
+
+    .my_box01 .my_box01_Sobre h2 {
         width: 60% !important;
     }
-    .my_box01 .my_box01_Sobre p{
+
+    .my_box01 .my_box01_Sobre p {
         width: 60% !important;
     }
 }
@@ -270,19 +414,22 @@ main{
         margin: 3rem auto auto auto;
         justify-content: space-around;
     }
-    .my_box01 .my_box01_Images img{
+
+    .my_box01 .my_box01_Images img {
         width: 45% !important;
     }
-    .my_box01 .my_box01_Sobre h2{
+
+    .my_box01 .my_box01_Sobre h2 {
         width: 70% !important;
     }
-    .my_box01 .my_box01_Sobre p{
+
+    .my_box01 .my_box01_Sobre p {
         width: 70% !important;
     }
 }
 
 @media screen and (min-width: 1991px) {
-    .my_box01 .my_box01_Images img{
+    .my_box01 .my_box01_Images img {
         width: 40% !important;
     }
 }
@@ -291,17 +438,17 @@ main{
 /* my_box02 - My Sobre*/
 
 @media screen and (max-width: 500px) {
-    
-    .my_box02 .my_descricao{
+
+    .my_box02 .my_descricao {
         margin-top: 3rem;
         width: 100% !important;
     }
 
-    .my_span{
+    .my_span {
         flex-direction: column;
     }
 
-    .my_span span{
+    .my_span span {
         margin-top: 1rem;
         text-align: center;
     }
@@ -309,7 +456,7 @@ main{
 }
 
 @media screen and (min-width: 501px) and (max-width: 799px) {
-    .my_box02 .my_descricao{
+    .my_box02 .my_descricao {
         margin-top: 3rem;
         width: 100% !important;
         flex-direction: row !important;
@@ -320,15 +467,15 @@ main{
         width: 55% !important;
     }
 
-    .my_box02 .my_descricao .my_span{
+    .my_box02 .my_descricao .my_span {
         width: 25% !important;
     }
 
-    .my_span{
+    .my_span {
         flex-direction: column;
     }
 
-    .my_span span{
+    .my_span span {
         margin-top: 1rem;
         text-align: center;
     }
@@ -340,19 +487,21 @@ main{
         top: 0;
         width: 60% !important;
     }
-    .my_span{
+
+    .my_span {
         grid-template-columns: auto auto auto;
         gap: 1rem;
     }
 }
 
-@media screen and (min-width: 850px) and (max-width: 1280px){
+@media screen and (min-width: 850px) and (max-width: 1280px) {
     .my_span03 {
         grid-area: my_span03;
         text-align: center;
     }
-    .my_span{
-        grid-template-areas: 
+
+    .my_span {
+        grid-template-areas:
             "my_span01 my_span02"
             "my_span03 my_span03";
     }
@@ -376,7 +525,7 @@ main{
     }
 }
 
-@media screen and (min-width: 2000px){
+@media screen and (min-width: 2000px) {
     .my_box02 .my_descricao {
         top: 25%;
     }
@@ -387,37 +536,37 @@ main{
 /* my_box02 - Tamanho da Sub Imagem: */
 
 @media screen and (max-width: 450px) {
-    .my_box02 .my_sub_imagem img{
+    .my_box02 .my_sub_imagem img {
         width: 40% !important;
     }
 }
 
 @media screen and (min-width: 451px) and (max-width: 600px) {
-    .my_box02 .my_sub_imagem img{
+    .my_box02 .my_sub_imagem img {
         width: 30% !important;
     }
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
-    .my_box02 .my_sub_imagem img{
+    .my_box02 .my_sub_imagem img {
         width: 35% !important;
     }
 }
 
 @media screen and (min-width: 901px) and (max-width: 1280px) {
-    .my_box02 .my_sub_imagem img{
+    .my_box02 .my_sub_imagem img {
         width: 40% !important;
     }
 }
 
-@media screen and (min-width: 1281px)  and (max-width: 1920px) {
-    .my_box02 .my_sub_imagem img{
+@media screen and (min-width: 1281px) and (max-width: 1920px) {
+    .my_box02 .my_sub_imagem img {
         width: 50% !important;
     }
 }
 
 @media screen and (min-width: 1921px) {
-    .my_box02 .my_sub_imagem img{
+    .my_box02 .my_sub_imagem img {
         width: 60% !important;
     }
 }
@@ -425,13 +574,30 @@ main{
 /* my_box01 my_span span_alt */
 
 @media screen and (max-width: 1280px) {
-    .span_alt{
+    .span_alt {
         width: 50% !important;
     }
 }
 
 @media screen and (min-width: 1281px) {
-    .span_alt{
+    .span_alt {
         width: 100% !important;
+    }
+}
+
+
+/* Carousel */
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2));
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+        padding: 0;
     }
 }
