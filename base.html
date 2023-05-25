@@ -49,7 +49,7 @@
 
   <!-- {% endblock %} -->
 
-  <section class="modal-body">
+  <section class="modal-body my_formSection">
     
     <form class="w-100 d-flex flex-column align-items-center justify-content-center">
       
@@ -103,15 +103,33 @@
           </div>
         </aside>
         <aside>
-          <!-- Mensagem input -->
+          <!-- Motivo input -->
           <div class="form-floating">
-            <input type="text" id="motivo" name="motivo" class="form-control my_form-control" placeholder="Motivo da Mensagem" required/>
+            <input 
+              type="text"
+              id="motivo"
+              name="motivo"
+              class="form-control my_form-control"
+              placeholder="Motivo da Mensagem"
+              oninvalid="this.setCustomValidity('Realizar o preenchimento do campo')"
+              oninput="this.setCustomValidity('')"
+              required
+            />
             <label for="motivo">Motivo da Mensagem</label>
           </div>
 
           <!-- Mensagem input -->
           <div class="form-floating">
-            <textarea type="text" id="mensagem" name="mensagem" class="my_textarea form-control my_form-control" placeholder="mensagem" required></textarea>
+            <textarea 
+              type="text" 
+              id="mensagem" 
+              name="mensagem" 
+              class="my_textarea form-control my_form-control" 
+              placeholder="mensagem"
+              oninvalid="this.setCustomValidity('Realizar o preenchimento do campo')"
+              oninput="this.setCustomValidity('')"
+              required
+            ></textarea>
             <label for="mensagem">Mensagem</label>
           </div>
         </aside>

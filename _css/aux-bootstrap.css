@@ -8,6 +8,14 @@
     margin: 0;
 }
 
+.my_formSection{
+    background-color: #F9F9F9;
+}
+
+header{
+    background-color: #F9F9F9;
+}
+
 nav a{
     color: #151E3D !important;
 }
@@ -192,6 +200,10 @@ main {
 
 /* Formulário */
 
+.my_form-control{
+    background-color: #F9F9F9 !important;
+}
+
 .my_form-control:focus {
     border-color: rgba(201, 162, 39, 0.60)!important;
     /* offset-x | offset-y | blur-radius | spread-radius | color */
@@ -200,7 +212,7 @@ main {
 
 .my_formTitle{
     font-size: 1.5rem;
-    margin: 2rem;
+    margin-bottom: 3rem;
 }
 
 .my_formDiv{
