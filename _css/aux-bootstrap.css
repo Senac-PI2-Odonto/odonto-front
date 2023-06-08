@@ -352,6 +352,27 @@ footer .my_footer_divR span{
   padding: 1px;
 }
 
+/* Search Bar */
+
+.my_nav{
+    max-width: 1600px;
+    margin: auto;
+}
+
+.my_search_btn{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.my_search_btn img{
+    width: 1.6rem;
+}
 
 /* Imagens */
 
@@ -386,7 +407,7 @@ footer .my_footer_divR span{
         position: absolute;
         z-index: 1;
         top: 100%;
-        left: 0;
+        right: 0;
         width: 100%;
         background-color: #F8F9FA;
         text-align: left;
@@ -401,7 +422,7 @@ footer .my_footer_divR span{
         position: absolute;
         z-index: 1;
         top: 100%;
-        left: 50%;
+        right: 50%;
         width: 50%;
         background-color: #F8F9FA;
         text-align: left;
