@@ -321,6 +321,10 @@ footer .my_footer_divR span{
     margin-top: 0;
 }
 
+.my_btn_sm{
+    padding: 0.6rem 1.6rem;
+}
+
 .custom-checkbox{
     margin-top: 1.5rem;
     width: 80%;
@@ -372,6 +376,98 @@ footer .my_footer_divR span{
 
 .my_search_btn img{
     width: 1.6rem;
+}
+
+
+/* my_tratamentoContainer */
+
+.my_tratamentoSection{
+    display: grid !important;
+    gap: 1rem;
+}
+
+.my_tratamentoContainer{
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.my_tratamentoContainer .my_tratamentoImagem{
+    width: 16rem;
+    height: 14rem;
+    object-fit: cover;
+    border-radius: 0.4rem;
+}
+
+.my_tratamentoContainer h1{
+    font-size: 1.2rem;
+    margin: 1rem;
+    color: #151E3D;
+    width: 14rem;
+    text-align: center;
+}
+
+.my_tratamentoContainer p{
+    font-size: 0.9rem;
+    color: #151E3D;
+    width: 14rem;
+    text-align: justify;
+}
+
+/* Modal Header */
+
+.my_modal-header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.my_modal-header .my_modal-headerDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.my_modal-header .my_modal-headerDiv h1{
+    width: 100%;
+    text-align: center;
+}
+
+.my_modal-header .my_modal-headerDiv button{
+    position: absolute;
+    margin-left: 90%;
+}
+
+.my_modal-header .my_modal-headerDiv2{
+    margin: 1rem !important;
+    width: 80%;
+    margin: auto;
+}
+
+.my_modal-header h1{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #151E3D;
+    margin-right: 0.5rem;
+}
+
+.my_modal-header form input {
+    border-bottom: 1px solid #dee2e6 !important;
+    /* border-radius: 0 !important; */
+    background: transparent !important;
+}
+
+.my_modal-header form input:focus {
+    border-bottom-color: rgba(201, 162, 39, 0.60)!important;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0 0 0 3.5px rgba(201, 162, 39, 0.35) !important;
 }
 
 /* Imagens */
@@ -945,5 +1041,110 @@ footer .my_footer_divR span{
     }
     footer .my_footer_divR .my_redesSociais li img{
         width: 70%;
+    }
+}
+
+/* .my_tratamentoContainer */
+
+@media screen and (min-width: 425px) and (max-width: 576px){
+    .my_tratamentoContainer .my_tratamentoImagem{
+        width: 18rem;
+        height: 16rem;
+    }
+    .my_tratamentoContainer h1 {
+        width: 16rem !important;
+    }
+    .my_tratamentoContainer p {
+        width: 16rem !important;
+    }
+}
+
+@media screen and (min-width: 461px) and (max-width: 576px){
+    .my_tratamentoContainer{
+        width: 24rem;
+        margin: auto;
+    }
+    .my_tratamentoContainer .my_tratamentoImagem{
+        height: 16rem;
+    }
+    .my_tratamentoContainer h1 {
+        width: 14rem;
+    }
+    .my_tratamentoContainer p {
+        width: 14rem;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px){
+    .my_tratamentoContainer{
+        width: 20rem;
+        margin: auto;
+    }
+    .my_tratamentoContainer .my_tratamentoImagem{
+        height: 14rem;
+    }
+    .my_tratamentoContainer h1 {
+        width: 14rem !important;
+    }
+    .my_tratamentoContainer p {
+        width: 14rem !important;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    .my_tratamentoSection{
+        grid-template-columns: auto auto auto !important;
+    }
+    .my_tratamentoContainer{
+        width: 24rem;
+    }
+    .my_tratamentoContainer .my_tratamentoImagem{
+        height: 16rem;
+    }
+    .my_tratamentoContainer h1 {
+        width: 14rem;
+    }
+    .my_tratamentoContainer p {
+        width: 14rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .my_tratamentoSection{
+        grid-template-columns: auto auto auto auto !important;
+    }
+    .my_tratamentoContainer{
+        width: 24rem;
+    }
+    .my_tratamentoContainer .my_tratamentoImagem{
+        height: 16rem;
+    }
+    .my_tratamentoContainer h1 {
+        width: 14rem;
+    }
+    .my_tratamentoContainer p {
+        width: 14rem;
+    }
+    .my_tratamentoContainer h1{
+        font-size: 1.2rem;
+    }
+    
+    .my_tratamentoContainer p{
+        font-size: 1rem;
+    }
+    
+}
+
+/* my_modal-header */
+
+@media screen and (max-width: 420px) {
+    .my_modal-header .my_modal-headerDiv button{
+        margin-left: 80%;
+    }
+}
+
+@media screen and (min-width: 421px) and (max-width: 991px) {
+    .my_modal-header .my_modal-headerDiv button{
+        margin-left: 85%;
     }
 }

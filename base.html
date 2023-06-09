@@ -44,6 +44,41 @@
     </nav>
   </header>
 
+  <section class="modal fade modal-xl " id="my_modalSintomas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <section class="modal-dialog modal-dialog-scrollable">
+      <section class="modal-content">
+        <div class="modal-header my_modal-header">
+          <div class="my_modal-headerDiv">
+            <h1 class="modal-title" id="exampleModalLabel">Nossos tratamentos</h1>
+            <button type="button" class="btn-close my_btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="my_modal-headerDiv2">
+            <form id="my_searchForm" action="/pesquisar" method="POST" class="d-flex">
+              <input class="form-control my_form-control me-2" type="search" name="descricao"
+                placeholder="{{ pesquisaUsuario }}" aria-label="Search">
+              <button class="my_search_btn" type="submit" data-toggle="modal" data-target="#staticBackdrop"><img
+                  src="./assets/searchIcon.svg" alt=""></button>
+            </form>
+          </div>
+        </div>
+        <section class="modal-body my_tratamentoSection">
+          <article class="my_tratamentoContainer">
+              <img class="my_tratamentoImagem" src="./assets/download.jpeg" alt="imagem tratamento">
+              <h1>Aplicação de fluor</h1>
+              <p>Sensibilidade nos dentes</p>
+          </article>
+        </section>
+        <div class="modal-footer">
+          <button type="button" class="my_btn my_btn_sm" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </section>
+    </section>
+  </section>
+
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#my_modalSintomas">
+    Launch demo modal
+  </button>
+
   <!-- {% block content %} -->
 
   <!-- {% endblock %} -->
@@ -109,6 +144,7 @@
               type="text"
               id="motivo"
               name="motivo"
+              class="form-control my_form-control"
               pattern="^[A-Za-zÀ-ÿ\s\'\-\,\.\;\:\!\?\@\0-9\º\ª]{8,50}$"
               placeholder="Motivo da Mensagem"
               oninvalid="this.setCustomValidity('O motivo deve ter pelo pelos 8 caracteres.')"
