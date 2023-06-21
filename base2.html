@@ -9,67 +9,22 @@
   <link rel="stylesheet" type="text/css" href="./_css/aux-bootstrap.css" media="screen" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"> 
-  </head>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
 
 <body class="w-100">
-  <header>   
+  <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light p-3 my_nav">
-      <div class="container-fluid">
+
+      <div class="container-fluid d-flex justify-content-center my_base2Nav">
         <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="my_logoutBtn">
+          <img src="./assets/Logout.svg" alt="Logout">
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item ms-2">
-              <a class="nav-link active my_text_yellow" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item ms-2">
-              <a class="nav-link" href="#">Tratamento</a>
-            </li>
-            <li class="nav-item ms-2">
-              <a class="nav-link" href="#">História</a>
-            </li>
-            <li class="nav-item ms-2 me-4">
-              <a class="nav-link" href="#">Contrato</a>
-            </li>
-          </ul>
-        </div>
       </div>
+        
     </nav>
   </header>
-
-  <section class="modal fade modal-xl " id="my_modalSintomas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <section class="modal-dialog modal-dialog-scrollable">
-      <section class="modal-content">
-        <div class="modal-header my_modal-header">
-          <div class="my_modal-headerDiv">
-            <h1 class="modal-title" id="exampleModalLabel">Nossos tratamentos</h1>
-            <button type="button" class="btn-close my_btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="my_modal-headerDiv2">
-            <form id="my_searchForm" action="/pesquisar" method="POST" class="d-flex">
-              <input class="form-control my_form-control me-2" type="search" name="descricao"
-                placeholder="{{ pesquisaUsuario }}" aria-label="Search">
-              <button class="my_search_btn" type="submit" data-toggle="modal" data-target="#staticBackdrop"><img
-                  src="./assets/searchIcon.svg" alt=""></button>
-            </form>
-          </div>
-        </div>
-        <section class="modal-body my_tratamentoSection">
-          <article class="my_tratamentoContainer">
-              <img class="my_tratamentoImagem" src="./assets/download.jpeg" alt="imagem tratamento">
-              <h1>Aplicação de fluor</h1>
-              <p>Sensibilidade nos dentes</p>
-          </article>
-        </section>
-        <div class="modal-footer">
-          <button type="button" class="my_btn my_btn_sm" data-bs-dismiss="modal">Fechar</button>
-        </div>
-      </section>
-    </section>
-  </section>
 
 
   <!-- {% block content %} -->
@@ -84,9 +39,9 @@
         <address>Endereço: Av. Loremm, 234.</address>
         <span>De Segunda a Sexta, entre 08:00 - 17:00</span>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          Curabitur cursus at augue quis bibendum.Lorem ipsum dolor 
-          sit amet, consectetur adipiscing elit. Curabitur cursus at 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Curabitur cursus at augue quis bibendum.Lorem ipsum dolor
+          sit amet, consectetur adipiscing elit. Curabitur cursus at
           augue quis bibendum.
         </p>
       </div>
@@ -95,6 +50,7 @@
           <li>Termos Gerais e Condições</li>
           <li>Políticas de Privacidade</li>
           <li>Desenvolvedores</li>
+          <li>Administrador</li>
           <li>Termos</li>
         </ul>
         <ul class="my_redesSociais">
@@ -106,7 +62,7 @@
       </div>
     </section>
   </footer>
-  
+
   <script>
     function toast(msg, bg) {
       Toastify({
@@ -125,8 +81,8 @@
     window.onload = function (event) {
       var msg = "{{ msg }}";
       if (msg.length > 0) {
-          bg = "#C9A227";
-          toast(msg, bg);
+        bg = "#C9A227";
+        toast(msg, bg);
       }
     };
 
@@ -135,9 +91,10 @@
 </body>
 
 <!-- Js do toastify -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 <!-- JS do Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
 </html>

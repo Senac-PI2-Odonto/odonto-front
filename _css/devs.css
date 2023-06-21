@@ -1,0 +1,118 @@
+.my_DevMain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.my_Devimage{
+    width: 100%;
+    text-align: center;
+}
+
+.my_Devimage img{
+    border-radius: 100%;
+    width: 80%;
+    max-width: 300px;
+}
+
+.my_DevCard {
+    border: 1px solid #DEE2E6;
+    border-radius: 8px;
+    width: 80%;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.my_DevCardMarginExtraStart {
+    margin-top: 2rem !important;
+}
+
+.my_DevCardMarginExtraEnd {
+    margin-bottom: 2rem !important;
+}
+
+.my_DevCard p {
+    text-align: justify;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-indent: 2rem;
+}
+
+.my_DevCard p.skills{
+    text-indent: 0;
+}
+
+.my_DevCard span{
+    display: flex !important;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.my_DevCard .my_DevAside {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.my_DevCard .my_DevAside a{
+    text-decoration: none;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30px;
+}
+
+.my_DevCard .my_DevAside a img{
+    width: 30px;
+}
+
+@media screen and (min-width: 700px) {
+    .my_DevCard{
+        display: grid;
+        grid-template-areas:
+            "imagem descricao"
+            "links links"; 
+        grid-template-columns: 40% 60%;
+    }
+
+    .my_DevCard .my_Devimage{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .my_Devimage{
+        grid-area: imagem;
+    }
+
+    .my_Devdescription{
+        grid-area: descricao;
+    }
+
+    .my_DevAside{
+        grid-area: links;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px){
+    .my_DevAside{ 
+        width: 50% !important;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1900px){
+    .my_DevAside{ 
+        width: 30% !important;
+    }
+}
+
+@media screen and (min-width: 1901px){
+    .my_DevAside{ 
+        width: 20% !important;
+    }
+}
