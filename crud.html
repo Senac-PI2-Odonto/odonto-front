@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./_css/aux-bootstrap.css">
     <link rel="stylesheet" href="./_css/crud.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -19,9 +20,9 @@
                 <img src="./assets/Add.svg" alt="">
             </button>   
         </header>
-        <article class="table">
-            <table class="table align-middle mb-0 bg-white">
-                <thead class="bg-light">
+        <article class="my_table">
+            <table class="table">
+                <thead>
                     <tr>
                         <th>Nome</th>
                         <th>Descrição</th>
@@ -32,40 +33,56 @@
                 <tbody>
                     <tr>
                         <td>
+                            <span class="my_mobileSpan">Nome</span>
                             <p class="fw-normal mb-1">teste</p>
                         </td>
                         <td>
+                            <span class="my_mobileSpan">Descrição</span>
                             <p class="fw-normal mb-1">testedes</p>
                         </td>
                         <td>
-                            <img src="./assets/cacto.jpg" />
+                            <span class="my_mobileSpan">Imagem</span>
+                            <div>
+                                <img src="./assets/cacto.jpg" />
+                            </div>           
                         </td>
                         <td class="acao">
-                            <button type="button" data-bs-toggle="modal" data-bs-target="#my_modalEdit">
-                                <img src="./assets/Edit.svg" alt="">
-                            </button>
-                            <button type="button" data-bs-toggle="modal" data-bs-target="#my_modalDelete">
-                                <img src="./assets/Delete.svg" alt="">
-                            </button>
+                            <span class="my_mobileSpan">Ação</span>
+                            <div>
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#my_modalEdit">
+                                    <img class="my_btn_icon" src="./assets/Edit.svg" alt="">
+                                </button>
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#my_modalDelete">
+                                    <img class="my_btn_icon" src="./assets/Delete.svg" alt="">
+                                </button>
+                            </div>
                         </td>
                     </tr>
                     <tr>
                         <td>
+                            <span class="my_mobileSpan">Nome</span>
                             <p class="fw-normal mb-1">teste</p>
                         </td>
                         <td>
+                            <span class="my_mobileSpan">Descrição</span>
                             <p class="fw-normal mb-1">testedes</p>
                         </td>
                         <td>
-                            <img src="./assets/download.jpeg" />
+                            <span class="my_mobileSpan">Imagem</span>
+                            <div>
+                                <img src="./assets/download.jpeg" />
+                            </div>           
                         </td>
                         <td class="acao">
-                            <button type="button" data-bs-toggle="modal" data-bs-target="#my_modalEdit">
-                                <img src="./assets/Edit.svg" alt="">
-                            </button>
-                            <button type="button" data-bs-toggle="modal" data-bs-target="#my_modalDelete">
-                                <img src="./assets/Delete.svg" alt="">
-                            </button>
+                            <span class="my_mobileSpan">Ação</span>
+                            <div>
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#my_modalEdit">
+                                    <img class="my_btn_icon" src="./assets/Edit.svg" alt="">
+                                </button>
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#my_modalDelete">
+                                    <img class="my_btn_icon" src="./assets/Delete.svg" alt="">
+                                </button>
+                            </div>
                         </td>
                     </tr>
                 </tbody>
@@ -90,7 +107,7 @@
                             aria-label="Close"></button>
                     </div>
                 </div>
-                <section class="modal-body my_tratamentoSection">
+                <section class="modal-body my_tratamentoSectionCrud">
                     <section class="modal-body my_formSection">
 
                         <form class="w-100 d-flex flex-column align-items-center justify-content-center">
@@ -125,7 +142,7 @@
                                 </aside>
                             </div>
                             <!-- Submit button -->
-                            <button type="submit" class="my_btn">Enviar</button>
+                            <button type="submit" class="my_btn my_btn_crud">Enviar</button>
                         </form>
                     </section>
                 </section>
@@ -149,7 +166,7 @@
                             aria-label="Close"></button>
                     </div>
                 </div>
-                <section class="modal-body my_tratamentoSection">
+                <section class="modal-body my_tratamentoSectionCrud">
                     <section class="modal-body my_formSection">
 
                         <form class="w-100 d-flex flex-column align-items-center justify-content-center">
@@ -184,7 +201,7 @@
                                 </aside>
                             </div>
                             <!-- Submit button -->
-                            <button type="submit" class="my_btn">Enviar</button>
+                            <button type="submit" class="my_btn my_btn_crud">Atualizar</button>
                         </form>
                     </section>
                 </section>
@@ -208,7 +225,7 @@
                             aria-label="Close"></button>
                     </div>
                 </div>
-                <section class="modal-body my_tratamentoSection">
+                <section class="modal-body my_tratamentoSectionCrud">
                     <article class="my_tratamentoContainer">
                         <h1>Deseja realmente apagar esse tratamento ?</h1>
                         <img class="my_tratamentoImagem" src="./assets/download.jpeg" alt="imagem tratamento">
