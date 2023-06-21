@@ -14,30 +14,60 @@
 
     <section class="container">
         <header>
-            <span>Tratamentos</span>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#my_modalAdd">
-                Adicionar
-            </button>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#my_modalEdit">
-                Editar
-            </button>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#my_modalDelete">
-                Apagar
-            </button>
+            <h1>Tratamentos</h1>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#my_modalAdd">
+                <img src="./assets/Add.svg" alt="">
+            </button>   
         </header>
         <article class="table">
-            <table>
-                <thead>
+            <table class="table align-middle mb-0 bg-white">
+                <thead class="bg-light">
                     <tr>
                         <th>Nome</th>
                         <th>Descrição</th>
                         <th>Imagem</th>
-                        <th class="acao">Editar</th>
-                        <th class="acao">Excluir</th>
+                        <th>Ação</th>
                     </tr>
                 </thead>
                 <tbody>
-
+                    <tr>
+                        <td>
+                            <p class="fw-normal mb-1">teste</p>
+                        </td>
+                        <td>
+                            <p class="fw-normal mb-1">testedes</p>
+                        </td>
+                        <td>
+                            <img src="./assets/cacto.jpg" />
+                        </td>
+                        <td class="acao">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#my_modalEdit">
+                                <img src="./assets/Edit.svg" alt="">
+                            </button>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#my_modalDelete">
+                                <img src="./assets/Delete.svg" alt="">
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="fw-normal mb-1">teste</p>
+                        </td>
+                        <td>
+                            <p class="fw-normal mb-1">testedes</p>
+                        </td>
+                        <td>
+                            <img src="./assets/download.jpeg" />
+                        </td>
+                        <td class="acao">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#my_modalEdit">
+                                <img src="./assets/Edit.svg" alt="">
+                            </button>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#my_modalDelete">
+                                <img src="./assets/Delete.svg" alt="">
+                            </button>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </article>
@@ -185,10 +215,11 @@
                         <h1>Aplicação de fluor</h1>
                         <p>Sensibilidade nos dentes</p>
                     </article>
-                  </section>
+                </section>
                 <div class="modal-footer">
                     <button type="button" class="my_btn my_btn_sm" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="my_btn my_btn_sm bg-danger text-white" data-bs-dismiss="modal">Apagar</button>
+                    <button type="button" class="my_btn my_btn_sm bg-danger text-white"
+                        data-bs-dismiss="modal">Apagar</button>
                 </div>
             </section>
         </section>
