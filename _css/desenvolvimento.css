@@ -20,3 +20,8 @@
 .desenvolvimentoBtn {
     margin-top: 0.5rem;
 }
+
+.desenvolvimentoBtn a {
+    color: #151E3D;
+    text-decoration: none;
+}

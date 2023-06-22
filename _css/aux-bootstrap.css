@@ -76,6 +76,15 @@ footer .my_footer_divR{
     margin-top: 3rem;
 }
 
+footer .my_footer_divR a{
+    text-decoration: none;
+    color: #151E3D;
+}
+
+footer .my_footer_divR a:active{
+    color: #151E3D;
+}
+
 footer .my_footer_divR ul{
     list-style: none;
     padding: 0;

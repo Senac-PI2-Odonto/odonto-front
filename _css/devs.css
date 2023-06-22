@@ -24,14 +24,6 @@
     margin: 1rem;
 }
 
-.my_DevCardMarginExtraStart {
-    margin-top: 2rem !important;
-}
-
-.my_DevCardMarginExtraEnd {
-    margin-bottom: 2rem !important;
-}
-
 .my_DevCard p {
     text-align: justify;
     margin-top: 1rem;
